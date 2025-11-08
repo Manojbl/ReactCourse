@@ -1,9 +1,9 @@
 import axios from 'axios';
 import dayjs from 'dayjs';
 import { useState , useEffect } from 'react';
-import './CheckoutPage.css';
 import './Checkout-header.css';
-import { formatCurrency } from '../Utils/money';
+import './CheckoutPage.css';
+import { formatCurrency } from '../../Utils/money';
 export function CheckoutPage({ cart }) {
   const [deliveryOptions, setDeliveryOptions] = useState([]);
   const [paymentSummary, setPaymentSummary] = useState(null);
