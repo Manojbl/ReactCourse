@@ -3,9 +3,11 @@ import './Header.css';
 export function Header({ cart }) {
 
     let totalQuantity = 0;
-    cart.forEach(item => {
-        totalQuantity += item.quantity;
+    
+    cart.forEach((cartItem) => {
+        totalQuantity += cartItem.quantity;
     });
+
     return (
        <div className="header">
         <div className="left-section">
