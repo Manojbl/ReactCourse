@@ -6,6 +6,7 @@ import { CheckoutPage } from './Pages/checkout/CheckoutPage'
 import { TrackingPage } from './Pages/tracking/TrackingPage'
 import { OrdersPage } from './Pages/orders/OrdersPage'
 import './App.css'
+window.axios = axios;
 
  function App() {
     const [cart, setCart] = useState([]);
@@ -24,7 +25,7 @@ import './App.css'
       <Route index element={<HomePage cart={cart}  loadCart={loadCart} />} />
       <Route path="checkout" element={<CheckoutPage cart={cart}  loadCart={loadCart} />} />
       <Route path="tracking" element={<TrackingPage cart={cart} />} />
-      <Route path="orders" element={<OrdersPage cart={cart} />} />
+      <Route path="orders" element={<OrdersPage cart={cart}  loadCart={loadCart} />}  />
     </Routes>
   );
   }
