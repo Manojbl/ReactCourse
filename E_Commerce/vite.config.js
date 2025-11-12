@@ -9,5 +9,8 @@ export default defineConfig({
       '/api': 'http://localhost:3000',
       '/images': 'http://localhost:3000'
     }
+  },
+  build:{
+    outDir:'../E_commerce-backend/dist'
   }
 })
